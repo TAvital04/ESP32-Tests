@@ -1,0 +1,2 @@
+source /home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader/gdbinit/symbols
+source /home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader/gdbinit/connect

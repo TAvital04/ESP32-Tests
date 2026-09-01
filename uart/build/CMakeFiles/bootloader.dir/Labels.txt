@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/tal/Documents/Projects/ESP-IDF/uart/build/CMakeFiles/bootloader
+/home/tal/Documents/Projects/ESP-IDF/uart/build/CMakeFiles/bootloader.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/CMakeFiles/bootloader-complete.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/tal/Documents/Projects/ESP-IDF/uart/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

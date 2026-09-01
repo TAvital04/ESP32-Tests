@@ -1,0 +1,7 @@
+-Wno-frame-address
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+"-specs=/home/tal/Documents/Projects/ESP-IDF/uart/build/specs/picolibc.specs"
+-fno-rtti
