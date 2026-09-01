@@ -1,0 +1,68 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editors
+.vscode/
+.idea/
+.clangd/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# ESP-IDF / CMake generated output
+**/build/
+**/CMakeFiles/
+**/cmake-build-*/
+**/config/
+**/bootloader-prefix/
+**/esp-idf/
+**/partition_table/
+**/toolchain/
+**/gdbinit/
+**/ld/
+**/specs/
+**/kconfigs.in
+**/kconfigs_projbuild.in
+**/project_description.json
+**/config.env
+**/hints.yml
+**/compile_commands.json
+**/*.log
+
+# Project config and artifacts
+**/sdkconfig
+**/sdkconfig.old
+**/sdkconfig.defaults
+**/dependencies.lock
+**/*.bin
+**/*.elf
+**/*.map
+**/*.hex
+**/*.dump
+**/*.o
+**/*.a
+**/*.so
+**/*.d
+**/*.pyc
+
+# Flash / linker generated args
+**/flash_args
+**/flash_app_args
+**/flash_bootloader_args
+**/flash_project_args
+**/flash_args.in
+**/app-flash_args
+**/app-flash_args.in
+**/bootloader-flash_args
+**/partition-table-flash_args
+**/flasher_args.json
+**/flasher_args.json.in
+
+# Local generated cert / bundle files
+**/x509_crt_bundle.S

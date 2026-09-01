@@ -1,0 +1,3 @@
+Kernel configuration: 'Component Config/FreeRTOS/Kernel'
+
+Port configuration: 'Component Config/FreeRTOS/Port'
