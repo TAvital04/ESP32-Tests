@@ -1,2 +1,0 @@
-source /home/tal/Documents/Projects/ESP-IDF/blink-led/build/bootloader/gdbinit/symbols
-source /home/tal/Documents/Projects/ESP-IDF/blink-led/build/bootloader/gdbinit/connect
