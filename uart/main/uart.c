@@ -7,18 +7,18 @@
 #include "driver/uart.h"
 
 // Definitions
-#define BAUD_RATE		115200
-#define DATA_BITS		UART_DATA_8_BITS
-#define STOP_BITS		UART_STOP_BITS_1
-#define PARITY			UART_PARITY_DISABLE
+#define BAUD_RATE			115200
+#define DATA_BITS			UART_DATA_8_BITS
+#define STOP_BITS			UART_STOP_BITS_1
+#define PARITY				UART_PARITY_DISABLE
 #define FLOW_CONTROL		UART_HW_FLOWCTRL_DISABLE
-#define SOURCE_CLK		UART_SCLK_DEFAULT
+#define SOURCE_CLK			UART_SCLK_DEFAULT
 
-#define PORT_NUM		UART_NUM_0
+#define PORT_NUM			UART_NUM_0
 #define RX_BUFFER_LENGTH	1024
 #define TX_BUFFER_LENGTH	0
 #define QUEUE_LENGTH		0
-#define FLAGS			0
+#define FLAGS				0
 
 void app_main(void)
 {
