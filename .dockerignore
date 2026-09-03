@@ -1,0 +1,17 @@
+# Docker internals
+Dockerfile*
+.dockerignore
+
+# Version control & OS metadata
+.git
+.gitignore
+.DS_Store
+Thumbs.db
+
+# Build artifacts & dependencies
+build/
+dist/
+__pycache__/
+*.pyc
+.venv/
+.espressif/
