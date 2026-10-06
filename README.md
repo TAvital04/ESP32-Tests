@@ -1,13 +1,15 @@
-# ESP32 Tests
+# ESP IDF Tests
+A playground for testing the ESP IDF
 
-This repository serves as a playground for working with the ESP-IDF.
+## DEVS
 
-## Start project
-
-``` bash
-# Build the docker image
-docker build .
-
-# Run the docker images
-docker run -it IMAGE:TAG
+### Enter the Docker Container (Linux)
+```bash
+docker build -t esp-idf .
+docker run -it --rm \
+    --device=/dev/[FLASHING PORT] \
+    -v $(pwd):/app \
+    -w /app \
+    esp-idf:latest /bin/bash
 ```
+There are no plans for switching to Docker Compose at the moment
