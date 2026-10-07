@@ -22,17 +22,17 @@
     #define TASK_PRIORITY 2
     #define STACK_SIZE 2048
 
-    #define RED_LED GPIO_NUM_15
+    #define GREEN_LED GPIO_NUM_15
     #define BLUE_LED GPIO_NUM_14
     #define FLASHLIGHT_PIN GPIO_NUM_4
 
 // Function Prototypes
-    void blink_red_led(void *pvParameters);
+    void blink_green_led(void *pvParameters);
     void blink_blue_led(void *pvParameters);
     void blink_flashlight(void *pvParameters);
 
 // Function Definitions
-    void blink_red_led(void *pvParameters)
+    void blink_green_led(void *pvParameters)
     {
         // Locals
         esp_err_t ret = ESP_OK;
@@ -40,10 +40,10 @@
 
         // Code
             // Reset the pin
-            gpio_reset_pin(RED_LED);
+            gpio_reset_pin(GREEN_LED);
 
             // Set the pin direction to output
-            ret = gpio_set_direction(RED_LED, GPIO_MODE_OUTPUT);
+            ret = gpio_set_direction(GREEN_LED, GPIO_MODE_OUTPUT);
             if(ret) {
                 goto cleanup;
             }
@@ -52,7 +52,7 @@
             while(true) {
                 
                 // Turn on the LED        
-                ret = gpio_set_level(RED_LED, 1);
+                ret = gpio_set_level(GREEN_LED, 1);
                 if(ret) {
                     goto cleanup;
                 }
@@ -61,7 +61,7 @@
                 vTaskDelay(xDelay);
 
                 // Turn off the LED
-                ret = gpio_set_level(RED_LED, 0);
+                ret = gpio_set_level(GREEN_LED, 0);
                 if(ret) {
                     goto cleanup;
                 }
@@ -70,7 +70,7 @@
                 vTaskDelay(xDelay);
             }
 
-    cleanup: gpio_reset_pin(RED_LED);
+    cleanup: gpio_reset_pin(GREEN_LED);
     }
 
     void blink_blue_led(void *pvParameters)
@@ -157,7 +157,7 @@
 
 void app_main(void)
 {
-    xTaskCreate(&blink_red_led, "blink_red_led", STACK_SIZE, NULL, TASK_PRIORITY, NULL);
+    xTaskCreate(&blink_green_led, "blink_green_led", STACK_SIZE, NULL, TASK_PRIORITY, NULL);
     xTaskCreate(&blink_blue_led, "blink_blue_led", STACK_SIZE, NULL, TASK_PRIORITY, NULL);
     xTaskCreate(&blink_flashlight, "blink_flashlight", STACK_SIZE, NULL, TASK_PRIORITY, NULL);
 }
