@@ -12,7 +12,14 @@
 
 void flash_task_init(flash_config_t config)
 {
-    xTaskCreate((TaskFunction_t)flash_task, "flash_task", STACK_SIZE, (void *)config, TASK_PRIORITY, NULL);
+    xTaskCreate(
+        (TaskFunction_t)flash_task,
+        "flash_task",
+        STACK_SIZE,
+        (void *)config,
+        TASK_PRIORITY,
+        NULL
+    );
 }
 
 void flash_task(void *pvParameters)

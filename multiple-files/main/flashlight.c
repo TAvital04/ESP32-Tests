@@ -9,14 +9,16 @@
  *****************************************************************************/
 
 #include "./flashlight.h"
+#include "./config.h"
 
-// Function Definitions
-    void flashlight_task_init() 
-    {
-        flash_config_t config = {
-            .pin = FLASHLIGHT_PIN,
-            .timing_ms = FLASHLIGHT_TIMING_MS
-        };
-        
-        flash_task_init(config);
-    }
+void flashlight_task_init() 
+{
+    // Locals
+    flash_config_t config = {
+        .pin = FLASHLIGHT_PIN,
+        .timin  g_ms = FLASHLIGHT_TIMING_MS
+    };
+
+    // Code
+    flash_task_init(config);
+}
