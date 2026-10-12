@@ -11,6 +11,9 @@
 // Dependencies
 	#include <stdio.h>
 
+	#include "freertos/FreeRTOS.h"
+
+	#include "freertos/task.h"
 	#include "driver/gpio.h"
 
 // Definitions
@@ -21,6 +24,8 @@
 	{
 		// Locals
 		esp_err_t ret = ESP_OK;
+		
+		const TickType_t xDelay = pdMS_TO_TICKS(1000);
 
 		// Code
 		
@@ -33,16 +38,26 @@
 				goto cleanup;
 			}
 
-			// Turn on the LED		
-
-			ret = gpio_set_level(FLASHLIGHT_PIN, 1);
-			if(ret) {
-				goto cleanup;
-			}
-
 			// Stay running
 			while(true) { 
-				
+
+				// Turn on the LED		
+				ret = gpio_set_level(FLASHLIGHT_PIN, 1);
+				if(ret) {
+					goto cleanup;
+				}
+
+				// Wait 3 seconds
+				vTaskDelay(xDelay);
+
+				// Turn off the LED
+				ret = gpio_set_level(FLASHLIGHT_PIN, 0);
+				if(ret) {
+					goto cleanup;
+				}
+
+				// Wait 3 seconds
+				vTaskDelay(xDelay);
 			}
 		
 	cleanup:
